@@ -1,4 +1,4 @@
-﻿/*
+/*
 * Author: Daniela Lopez
 * Course: COMP-003A-L01
 * Purpose: Lecture activity for variables, type system, math, and console properties
@@ -8,24 +8,23 @@
 
 namespace COMP003A.LectureActivity2
 {
-internal class program
+internal class Program
 {
-static void main (string[] args)
+static void Main (string[] args)
 {
 /* working with variables */
 // the following code shows all three primary variable-related activities:
 string username; // declaring a variable (1 of 3)
-console.writeline ("What is your name?"); // request for user input
-username = console.readline (); // assigning a value to a variable (2 of 3)
-console.writeline ("Hi" + username); // retrieving its current value (3 of 3)
+Console.WriteLine ("What is your name?"); // request for user input
+username = Console.ReadLine (); // assigning a value to a variable (2 of 3)
+Console.WriteLine ("Hi" + username); // retrieving its current value (3 of 3)
 
 
-// another example of the three primary variable related activities
-(declaring, assigning, and retrieving)
+// another example of the three primary variable related activities (declaring, assigning, and retrieving)
 string favoritecolor;
-console.writeline ("What is your favorite color?");
-favoritecolor = console.readline ();
-console.writeline ("Your favorite coloe is" + favoritecolor);
+Console.WriteLine ("What is your favorite color?");
+favoritecolor = Console.ReadLine ();
+Console.WriteLine ("Your favorite coloe is" + favoritecolor);
 
 
 /* working with varible integers */
@@ -45,14 +44,14 @@ int b;
 
 a = 5;
 b = 2;
-console.writeline ("The current value of a: " + a);
-console.writeline ("The current value of b: " + b);
+Console.WriteLine ("The current value of a: " + a);
+Console.WriteLine ("The current value of b: " + b);
 
 
 b = a;
 a = -3;
-console.writeline ("The new value of a: " + a);
-console.writeline ("The new value of b: " + b);
+Console.WriteLine ("The new value of a: " + a);
+Console.WriteLine ("The new value of b: " + b);
 
 
 /* variables are case-sensitive */
@@ -62,7 +61,7 @@ string exampleVAriable;
 string exampleVARiable;
 
 
-console.writeline ("*****");
+Console.WriteLine ("*****");
 /*
 * types of variables and values matter in C#. they aare not interchangeable.
 * there are eight integer types for storing integers of differing sizes and ranges: int, short, long, byte, sbyte, uint, ushort, and ulong.
@@ -78,24 +77,24 @@ console.writeline ("*****");
 
 /* declaring and using variable with integer types */
 byte aSingleByte = 34;
-console.writeline ("aSingleByte: " + aSingleByte);
+Console.WriteLine ("aSingleByte: " + aSingleByte);
 aSingleByte = 17;
-console.writeline ("aSingleByte: " + aSingleByte);
+Console.WriteLine ("aSingleByte: " + aSingleByte);
 
 
 short aNumber = 5039;
-console.writeline ("aNumber: " + aNumber);
+Console.WriteLine ("aNumber: " + aNumber);
 aNumber = -4354;
-console.writeline ("aNumber: " + aNumber);
+Console.WriteLine ("aNumber: " + aNumber);
 
 
 long aVeryBigNumber = 395904282569;
-console.writeline ("aVeryBigNumber: " + aVeryBigNumber);
+Console.WriteLine ("aVeryBigNumber: " + aVeryBigNumber);
 aVeryBigNumber = 13;
-console.writeline ("aVeryBigNumber: " + aVeryBigNumber);
+Console.WriteLine ("aVeryBigNumber: " + aVeryBigNumber);
 
 
-int anInteger = 2147483647
+int anInteger = 2147483647;
 
 
 /* declaring, usiing, and concatenating characters and strings */
@@ -103,42 +102,41 @@ char aLetter = 'A'; // character values are enclosed in single quotes
 string message = "Hello World!"; // string values are enclosed in double quotes
 
 
-console.writeline ("Concatenation using + : " + aLetter + " " + message); // use the plus (+) sign in between characters/strings to concatenate
-console.writeline ($"Concatenation using string interpolation : {aLetter} {message} "); // use string  interpolation with a dollar-sign ($) before the opening double-quote and enclosing variable with curly braces ({variableName})
+Console.WriteLine ("Concatenation using + : " + aLetter + " " + message); // use the plus (+) sign in between characters/strings to concatenate
+Console.WriteLine ($"Concatenation using string interpolation : {aLetter} {message} "); // use string  interpolation with a dollar-sign ($) before the opening double-quote and enclosing variable with curly braces ({variableName})
 
 
 /* floating-point types */
 double number1 = 3.5623;
 float number2 = 3.5623f;
 decimal number3 = 3.5623m;
-console.writeline ($"Value of number1: {number1} ");
-console.writeline ($"Value of number2: {number2} ");
-console.writeline ($"Value of number3: {number3} ");
+Console.WriteLine ($"Value of number1: {number1} ");
+Console.WriteLine ($"Value of number2: {number2} ");
+Console.WriteLine ($"Value of number3: {number3} ");
 
 
 /* scientific notation */
 double avogadrosNumber = 6.022e23;
-console.writeline ($"Value of avogadorsNumber: {avogadrosNumber} ");
+Console.WriteLine ($"Value of avogadorsNumber: {avogadrosNumber} ");
 
 
 /* bool type */
 bool itWorked = true;
-console.writeline ($"Value of itWorked: {itWorked} ");
+Console.WriteLine ($"Value of itWorked: {itWorked} ");
 itWorked = false;
-console.writeline ($"New value of itWorked: {itWorked} ");
+Console.WriteLine ($"New value of itWorked: {itWorked} ");
 
 
 /* convert */
 string inputAgeString;
 int inputAge;
 int currentYear = 2023;
-console.writeline ($"Enter age in {currentYear} : ");
-inputAgeString = console.readline ();
+Console.WriteLine ($"Enter age in {currentYear} : ");
+inputAgeString = Console.ReadLine ();
 inputAge = Convert.ToInt32 (inputAgeString);
-console.writeline ($"Your age is {inputAge} ");
+Console.WriteLine ($"Your age is {inputAge} ");
 
-
-console.writeline ("*****");
+Console.WriteLine ("*****");
 /*
 * math operations
 * addition: +
@@ -154,11 +152,11 @@ int subtraction = 5 - 2;
 int multiplication = 22 * 2;
 int division = 21 / 7;
 int modulo = 77 % 5;
-console.writeline ($"Value of addition: {addition} ");
-console.writeline ($"Value of subtraction: {subtraction} ");
-console.writeline ($"Value of multiplication: {multiplication} ");
-console.writeline ($"Value of division: {division} ");
-console.writeline ($"Value of modulo: {modulo} ");
+Console.WriteLine ($"Value of addition: {addition} ");
+Console.WriteLine ($"Value of subtraction: {subtraction} ");
+Console.WriteLine ($"Value of multiplication: {multiplication} ");
+Console.WriteLine ($"Value of division: {division} ");
+Console.WriteLine ($"Value of modulo: {modulo} ");
 
 
 /*
@@ -171,18 +169,18 @@ console.writeline ($"Value of modulo: {modulo} ");
 
 int arithmetic1; // declaring the variable arithmetic1.
 arithmetic1 = 9 - 2; // assigning a value to arithmetic1, using some math.
-console.writeline ($"Value of arithmetic1: {arithmetic1} ");
+Console.WriteLine ($"Value of arithmetic1: {arithmetic1} ");
 arithmetic1 = 3 + 3; // another assignment.
-console.writeline ($"New value of arithmetic1: {arithmetic1} ");
+Console.WriteLine ($"New value of arithmetic1: {arithmetic1} ");
 int arithmetic2 = 3 + 1; // declaring arithmetic2 and assigning a value to arithmetic2 all at once.
-console.writeline ($"Value of arithmetic2: {arithmetic2} ");
+Console.WriteLine ($"Value of arithmetic2: {arithmetic2} ");
 arithmetic2 = 1 + 2; // assigning a second value to arithmetic2
-console.writeline ($"New value of arithmetic2: {arithmetic2} ");
+Console.WriteLine ($"New value of arithmetic2: {arithmetic2} ");
 
 
 // use multiple sets of parentheses to group operations
 int result = ((2 + 1) * 8 - (3 * 2) * 2) / 4;
-console.writeline ($"Value of result: {result} ");
+Console.WriteLine ($"Value of result: {result} ");
 
 
 /* compund assignment operator */
@@ -200,25 +198,26 @@ incrementDecrementOperators++; // The equivalent of incrementDecrementOperators 
 incrementDecrementOperators--; // The equivalent of incrementDecrementOperators -= 1; or incrementDecrementOperators = incrementDecrementOperators -1;
 
 
-console.writeline ("*****");
+Console.WriteLine ("*****");
 /* console 2.0 */
-console.write ("What is you name, human? "); // notice the space at the end.
-string userName = console.readline (); // reads the entire line
+Console.Write ("What is you name, human? "); // notice the space at the end.
+string userName = Console.ReadLine (); // reads the entire line
 // result: What is your name, human? Daniela
 
 
-console.writeline ("Press any key when you're ready to begin.");
-console.readkey (); // reads a keystroke
+Console.WriteLine ("Press any key when you're ready to begin.");
+Console.ReadKey (); // reads a keystroke
 
 
-console.backgroundcolor = consolecolor.yellow; // changes the console background to yellow
-console.foregroundcolor = consolecolor.black; // changes the console text to black
-console.title = "Hello World!"; // changes the console title
+Console.BackgroundColor = ConsoleColor.Yellow; // changes the console background to yellow
+Console.ForegroundColor = ConsoleColor.Black; // changes the console text to black
+Console.Title = "Hello World!"; // changes the console title
 
 
-console.beep (440, 1000); // computer beeps
+Console.Beep (440, 1000); // computer beeps
 
 
 }
 }
 }
+
